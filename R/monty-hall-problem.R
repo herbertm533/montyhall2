@@ -78,9 +78,9 @@ select_door <- function( )
 #'
 #' @param
 #'  game = the argument containing the positions of the goats and car
-#'  from the create_game() function
+#'  from the create_game function
 #'  a.pick = the arguement containing the contestants initial door
-#'  selection from the select_door() function
+#'  selection from the select_door function
 #'
 #' @return The function returns a length 1 numeric vector indiciting
 #' whether the opened door containing the goat was door 1, 2, or 3.
@@ -132,9 +132,9 @@ open_goat_door <- function( game, a.pick )
 #'  the contestant is sticking with their initial door selection and
 #'  "FALSE" if they are staying with their initial selection.
 #'  opened.door = the argument which has the returned door from the
-#'  open_goat_door() function.
+#'  open_goat_door function.
 #'  a.pick = the arguement containing the contestants initial door
-#'  selection from the select_door() function
+#'  selection from the select_door function
 #'
 #'
 #' @return The function returns a length 1 numeric vector indictating
@@ -168,7 +168,7 @@ change_door <- function( stay=T, opened.door, a.pick )
 #'
 #' @description
 #'   `determine_winner()` determines if the contestants final door
-#'   selection contained a car (win) or a goat (lose).
+#'   selection contained a car or a goat.
 #'
 #' @details
 #'   After the contestant makes their final door selection in the
@@ -177,9 +177,9 @@ change_door <- function( stay=T, opened.door, a.pick )
 #'
 #' @param
 #'  final.pick = the argument which has the returned door from the
-#'  change_door() function.
+#'  change_door function.
 #'  game = the argument containing the positions of the goats and car
-#'  from the create_game() function
+#'  from the create_game function
 #'
 #' @return The function returns a length 3 or 4 character vector
 #'   indicating whether the contestant won or loss the game.
@@ -227,10 +227,9 @@ determine_winner <- function( final.pick, game )
 #' @param ... no arguments are used by the function.
 #'
 #' @return The function returns a data framewith the results of
-#' the Monty Hall Problem game. Two columns are created
-#' (strategy and outcome) and two rows (stay and switch). This
-#' data frame shows whether it was advantegous to stay or switch
-#' in a particular Monty Hall game.
+#' the Monty Hall Problem game. The data frame shows whether it
+#' was advantegous to stay or switch in a particular Monty Hall game.
+#'
 #'
 #' @examples
 #'   play_game()
@@ -284,8 +283,7 @@ play_game <- function( )
 #'
 #' @return The function returns a data frame with the results of
 #' the Monty Hall game simulations. The rows contain the game strategy
-#' information (stay or switch). The columns contain the game outcome
-#' information (win or lose).
+#' information. The columns contain the game outcome information.
 #'
 #' @examples
 #'   play_n_games( n=100 )
